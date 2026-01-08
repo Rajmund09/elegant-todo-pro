@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elegant TODO Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <!-- Header -->
+    <header class="todo-header">
+      <div class="header-left">
+        <div class="logo">Elegant TODO Pro</div>
+        <div class="date-display" id="date-display"></div>
+      </div>
+      <button class="theme-toggle" id="theme-btn">
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
+      </button>
+    </header>
+
+    <!-- Stats Panel -->
+    <div class="stats-panel">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-tasks"></i></div>
+        <div class="stat-value" id="total-tasks">0</div>
+        <div class="stat-label">Total Tasks</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="stat-value" id="completed-tasks">0</div>
+        <div class="stat-label">Completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+        <div class="stat-value" id="pending-tasks">0</div>
+        <div class="stat-label">Pending</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-star"></i></div>
+        <div class="stat-value" id="priority-tasks">0</div>
+        <div class="stat-label">High Priority</div>
+      </div>
+    </div>
+
+    <!-- Input Section -->
+    <section class="input-section">
+      <div class="input-row">
+        <input type="text" class="task-input" id="new-task" placeholder="Add a new task..." autocomplete="off" />
+        <button class="add-btn" id="add-btn">
+          <i class="fas fa-plus"></i>
+          <span>Add Task</span>
+        </button>
+      </div>
+      <div class="priority-selector">
+        <span class="priority-label">Priority:</span>
+        <button class="priority-btn" data-priority="low">Low</button>
+        <button class="priority-btn active" data-priority="medium">Medium</button>
+        <button class="priority-btn" data-priority="high">High</button>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Tasks</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="high">High Priority</button>
+      </div>
+      <div class="action-buttons">
+        <button class="action-btn" id="clear-completed">
+          <i class="fas fa-trash-alt"></i>
+          <span>Clear Completed</span>
+        </button>
+        <button class="action-btn" id="focus-mode">
+          <i class="fas fa-crosshairs"></i>
+          <span>Focus Mode</span>
+        </button>
+        <button class="action-btn" id="sort-tasks">
+          <i class="fas fa-sort-amount-down"></i>
+          <span>Sort</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tasks Container -->
+    <div class="tasks-container">
+      <div class="tasks-header">
+        <div class="tasks-title">Your Tasks</div>
+        <div class="tasks-count" id="tasks-count">0 tasks</div>
+      </div>
+      
+      <ul class="tasks-list" id="tasks-list"></ul>
+      
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Progress</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon"><i class="fas fa-clipboard-list"></i></div>
+      <div class="empty-title">No tasks yet</div>
+      <div class="empty-text">Add your first task using the input above. You can set priorities, due dates, and more!</div>
+    </div>
+  </div>
+
+  <!-- Notification Container -->
+  <div id="notification-container"></div>
+<script src="script.js"></script>
+</body>
+</html>
