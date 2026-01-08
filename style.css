@@ -91,11 +91,10 @@
     .logo {
       font-size: 1.8rem;
       font-weight: 700;
-background: linear-gradient(90deg, 
-    rgba(102,126,234,0.9) 0%, 
-    rgba(118,75,162,0.8) 50%, 
-    rgba(86,201,247,0.7) 100%
-);      
+      background: linear-gradient(90deg,
+          rgba(102, 126, 234, 0.9) 0%,
+          rgba(118, 75, 162, 0.8) 50%,
+          rgba(86, 201, 247, 0.7) 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: 'Poppins', sans-serif;
@@ -312,25 +311,29 @@ background: linear-gradient(90deg,
       border-color: var(--primary);
     }
 
-    .priority-low { 
-      border-left: 4px solid var(--success); 
+    .priority-low {
+      border-left: 4px solid var(--success);
     }
-    body.dark .priority-low { 
       border-left: 4px solid #10b981; 
+
+    body.dark .priority-low {
+      border-left: 4px solid #10b981;
     }
-    
-    .priority-medium { 
-      border-left: 4px solid var(--secondary); 
+
+    .priority-medium {
+      border-left: 4px solid var(--secondary);
     }
-    body.dark .priority-medium { 
-      border-left: 4px solid #fbbf24; 
+
+    body.dark .priority-medium {
+      border-left: 4px solid #fbbf24;
     }
-    
-    .priority-high { 
-      border-left: 4px solid var(--danger); 
+
+    .priority-high {
+      border-left: 4px solid var(--danger);
     }
-    body.dark .priority-high { 
-      border-left: 4px solid #ef4444; 
+
+    body.dark .priority-high {
+      border-left: 4px solid #ef4444;
     }
 
     /* Controls */
@@ -659,19 +662,41 @@ background: linear-gradient(90deg,
 
     /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes slideIn {
-      from { transform: translateX(-20px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+      from {
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
     /* Responsive Design */
@@ -679,52 +704,52 @@ background: linear-gradient(90deg,
       .todo-container {
         gap: 1rem;
       }
-      
+
       .todo-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
       }
-      
+
       .header-left {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
       }
-      
+
       .stats-panel {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+
       .input-row {
         flex-direction: column;
       }
-      
+
       .add-btn {
         justify-content: center;
         padding: 1rem;
       }
-      
+
       .controls {
         flex-direction: column;
         align-items: flex-start;
       }
-      
+
       .action-buttons {
         width: 100%;
         justify-content: space-between;
       }
-      
+
       .task-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
       }
-      
+
       .task-checkbox {
         align-self: flex-start;
       }
-      
+
       .task-actions {
         align-self: flex-end;
         opacity: 1;
@@ -735,13 +760,15 @@ background: linear-gradient(90deg,
       .stats-panel {
         grid-template-columns: 1fr;
       }
-      
-      .filters, .action-buttons {
+
+      .filters,
+      .action-buttons {
         width: 100%;
         justify-content: center;
       }
-      
-      .filter-btn, .action-btn {
+
+      .filter-btn,
+      .action-btn {
         flex: 1;
         text-align: center;
         justify-content: center;
@@ -819,7 +846,10 @@ background: linear-gradient(90deg,
     }
 
     @keyframes slideOut {
-      to { transform: translateX(100%); opacity: 0; }
+      to {
+        transform: translateX(100%);
+        opacity: 0;
+      }
     }
 
     /* Scrollbar */
@@ -846,7 +876,7 @@ background: linear-gradient(90deg,
       opacity: 0.5;
       filter: blur(1px);
     }
-    
+
     .focus-mode .task-item.focused {
       background: rgba(92, 107, 242, 0.1);
       border-radius: var(--radius);
