@@ -314,7 +314,6 @@
     .priority-low {
       border-left: 4px solid var(--success);
     }
-      border-left: 4px solid #10b981; 
 
     body.dark .priority-low {
       border-left: 4px solid #10b981;
