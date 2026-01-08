@@ -1,5 +1,4 @@
 
-      sortOrder: 'desc'
 // App State
 const STORAGE_KEY = 'todo_elegant_pro';
 const state = {
